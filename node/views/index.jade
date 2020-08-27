@@ -1,0 +1,73 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to our test app
+
+  // Wrapper
+  #wrapper
+
+    // PATIENT INFO
+    #patientInfo
+      h2 Patient Info
+      p
+        strong Firstname:
+        |  <span id='patientInfoFirstName'></span>
+        br
+        strong Lastname:
+        |  <span id='patientInfoLastName'></span>
+        br
+        strong Age:
+        |  <span id='patientInfoAge'></span>
+        br
+        strong Gender:
+        |  <span id='patientInfoGender'></span>
+    // /PATIENT INFO
+
+    // PATIENT LIST
+    h2 Patient List
+    #patientList
+      table
+        thead
+          th Name
+          th Age
+          th Delete?
+        tbody
+    // /PATIENT LIST
+
+    // DRUG LIST
+    h2 Drug List
+    #drugList
+      table
+        thead
+          th Name
+          th Code
+          th Delete?
+        tbody
+    // /DRUG LIST
+
+    // ADD PATIENT
+    h2 Add Patient
+    #addPatient
+      fieldset
+        input#inputPatientFirstName(type='text', placeholder='Firstname')
+        input#inputPatientLastName(type='text', placeholder='Lastname')
+        br
+        input#inputPatientSex(type='text', placeholder='Gender')
+        input#inputPatientAge(type='text', placeholder='Age')
+        br
+        button#btnAddPatient Add Patient
+    // /ADD PATIENT
+
+    // ADD DRUG
+    h2 Add Drug
+    #addDrug
+      fieldset
+        input#inputDrugName(type='text', placeholder='Name')
+        input#inputDrugCode(type='text', placeholder='Code')
+        br
+        button#btnAddDrug Add Drug
+    // /ADD DRUG
+
+
+  // /WRAPPER
